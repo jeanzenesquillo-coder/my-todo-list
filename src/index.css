@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(135deg, #ffe6f0 0%, #e6e6ff 100%);
+  font-family: 'Quicksand', sans-serif;
+  min-height: 100vh;
+  display: grid;
+  place-items: center; /* Ito ang magic para perfect center */
+  padding: 20px; /* Para hindi dumikit sa gilid kapag mobile */
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

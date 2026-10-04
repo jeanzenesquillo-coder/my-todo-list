@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 450px; /* Maximum width sa desktop */
+}
+
+.todo-app {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 30px;
+  border: 3px solid #ffb6c1;
+  box-shadow: 0 15px 30px rgba(255, 182, 193, 0.4);
+  width: 100%;
+}
+
+h1 {
+  color: #d63384;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 2px solid #ffb6c1;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  outline: none;
+  color: #d63384;
+  min-width: 0; /* Para hindi lumabas sa box kapag mobile */
+}
+
+.input-group input::placeholder {
+  color: #ffb6c1;
+}
+
+.input-group button {
+  background: #ffb6c1;
+  color: #fff;
+  border: 2px solid #d87093;
+  border-radius: 15px;
+  padding: 0 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.input-group button:hover {
+  background: #ff9a9e;
+  transform: translateY(-2px);
+}
+
+.input-group button:active {
+  transform: translateY(0);
+}
+
+.todo-list {
+  list-style: none;
+}
+
+.todo-list li {
+  background: #fff5f7;
+  padding: 12px 15px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ffb6c1;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.todo-list li:hover {
+  box-shadow: 0 4px 10px rgba(255, 182, 193, 0.3);
+}
+
+.todo-list li span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #d63384;
+  font-weight: 600;
+  flex: 1;
+  word-break: break-word; /* Para hindi lumabas sa box ang mahabang text */
+}
+
+.todo-list li.completed span {
+  text-decoration: line-through;
+  color: #ffb6c1;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-btn:hover {
+  background: #ffe4e1;
+  transform: scale(1.2);
+}
+
+/* --- INSTRUCTIONS SECTION --- */
+.instructions {
+  background: #ffffff;
+  border: 2px solid #ffb6c1;
+  border-radius: 20px;
+  padding: 20px 25px;
+  width: 100%;
+  color: #d63384;
+  box-shadow: 0 10px 20px rgba(255, 182, 193, 0.3);
+}
+
+.instructions h3 {
+  color: #d63384;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.instructions ul {
+  list-style: none;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.instructions li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.instructions li::before {
+  content: '🎀';
+  margin-right: 10px;
+}
+
+/* ========================================= */
+/* RESPONSIVE DESIGN (Para sa maliliit na screen) */
+/* ========================================= */
+@media (max-width: 480px) {
+  body {
+    padding: 10px; /* Bawasan ang padding sa gilid */
+    align-items: start; /* Sa mobile, mag-start sa taas imbes na gitna */
+    padding-top: 30px;
+  }
+
+  .todo-app {
+    padding: 20px; /* Bawasan ang padding sa loob */
+    border-radius: 20px;
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Mas maliit na title */
+  }
+
+  .input-group {
+    flex-direction: column; /* Pagkakasunduin pababa ang input at button */
+  }
+
+  .input-group button {
+    padding: 12px;
+    width: 100%; /* Full width ang button sa mobile */
+  }
+
+  .instructions {
+    padding: 15px;
+  }
+}
